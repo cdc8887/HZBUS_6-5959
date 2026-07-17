@@ -1,0 +1,702 @@
+/* =====================
+   全局
+===================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+    "Microsoft YaHei",
+    Arial,
+    sans-serif;
+
+    background: #f7f8fc;
+
+    color: #222;
+
+}
+
+
+/* =====================
+   导航栏
+===================== */
+
+
+nav {
+
+    height: 80px;
+
+    background: #ffffff;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 70px;
+
+}
+
+
+
+.logo {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+
+.menu a {
+
+    text-decoration: none;
+
+    color: #333;
+
+    margin-left: 40px;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+.menu a:hover {
+
+    color: #3366ff;
+
+}
+
+
+
+/* =====================
+   首页大图
+===================== */
+
+
+.hero {
+
+    height: 520px;
+
+    background-image: url("images/home.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 100px;
+
+}
+
+
+
+.hero-text {
+
+    color: white;
+
+}
+
+
+
+.hero-text h1 {
+
+    font-size: 60px;
+
+    line-height: 1.3;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.hero-text p {
+
+    font-size: 20px;
+
+    line-height: 2;
+
+}
+
+
+
+
+
+/* =====================
+   首页三个入口
+===================== */
+
+
+.cards {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    padding: 70px;
+
+}
+
+
+
+.card {
+
+    width: 300px;
+
+    height: 230px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.08);
+
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+.card::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:180px;
+
+
+    height:180px;
+
+
+    right:-30px;
+
+
+    bottom:-30px;
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    border-radius:50%;
+
+
+    opacity:0.12;
+
+
+}
+
+
+
+/* 三个卡片背景 */
+
+
+.bus-card::after {
+
+    background-image:url("images/bus.jpg");
+
+}
+
+
+
+.photo-card::after {
+
+    background-image:url("images/photo1.JPG");
+
+}
+
+
+
+.travel-card::after {
+
+    background-image:url("images/travel.jpg");
+
+}
+
+
+
+
+.card h2,
+.card p,
+.card a {
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+
+
+.card h2 {
+
+    font-size:28px;
+
+}
+
+
+
+.card p {
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+
+
+.card a {
+
+    text-decoration:none;
+
+    color:#3366ff;
+
+}
+
+
+
+
+
+/* =====================
+   子页面统一容器
+===================== */
+
+
+.page {
+
+
+    width:1000px;
+
+
+    min-height:450px;
+
+
+    margin:80px auto;
+
+
+    padding:50px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 10px 40px rgba(0,0,0,0.08);
+
+
+}
+
+
+
+
+.page h1 {
+
+
+    font-size:45px;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+.page p {
+
+
+    font-size:18px;
+
+
+    color:#666;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+/* =====================
+   图片墙
+===================== */
+
+
+.gallery {
+
+
+    display:flex;
+
+
+    flex-wrap:wrap;
+
+
+    gap:30px;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+.gallery img {
+
+
+    width:260px;
+
+
+    height:180px;
+
+
+    object-fit:cover;
+
+
+    border-radius:15px;
+
+
+}
+
+
+
+
+.photo-item {
+
+
+    text-align:center;
+
+}
+
+
+
+
+.photo-item p {
+
+
+    margin-top:15px;
+
+}
+
+
+
+
+
+/* =====================
+   视频
+===================== */
+
+
+video {
+
+
+    width:100%;
+
+    max-width:800px;
+
+    border-radius:15px;
+
+}
+
+
+
+
+
+/* =====================
+   页脚
+===================== */
+
+
+footer {
+
+
+    text-align:center;
+
+
+    padding:40px;
+
+
+    color:#888;
+
+
+}
+
+
+
+
+
+/* =====================
+   手机适配
+===================== */
+
+
+@media(max-width:900px){
+
+
+    nav {
+
+        padding:0 25px;
+
+    }
+
+
+
+    .menu a {
+
+        margin-left:15px;
+
+    }
+
+
+
+    .hero {
+
+        padding-left:40px;
+
+    }
+
+
+
+    .hero-text h1 {
+
+        font-size:40px;
+
+    }
+
+
+
+    .cards {
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+
+
+    .page {
+
+        width:90%;
+
+    }
+
+
+}
+/* =========================
+   最近更新
+========================= */
+
+.updates,
+.notice {
+
+    width:1000px;
+    margin:80px auto;
+
+}
+
+
+.updates h2,
+.notice h2{
+
+    font-size:32px;
+    margin-bottom:30px;
+    color:#222;
+
+}
+
+
+
+.update-list{
+
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+    overflow:hidden;
+
+}
+
+
+
+.update-item{
+
+    padding:25px 40px;
+
+    border-bottom:1px solid #eeeeee;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    transition:0.3s;
+
+}
+
+
+
+.update-item:last-child{
+
+    border-bottom:none;
+
+}
+
+
+
+.update-item:hover{
+
+    background:#f7f9ff;
+
+    transform:translateX(5px);
+
+}
+
+
+
+.update-item h3{
+
+    font-size:20px;
+
+    margin:0 0 10px 0;
+
+    color:#222;
+
+}
+
+
+
+.update-item p{
+
+    margin:0;
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+
+
+
+
+/* =========================
+   网站通告
+========================= */
+
+
+.notice-box{
+
+
+background:#111827;
+
+
+color:white;
+
+
+padding:45px;
+
+
+border-radius:25px;
+
+
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+.notice-box p{
+
+
+color:#ddd;
+
+
+font-size:17px;
+
+
+line-height:2;
+
+
+margin:10px 0;
+
+
+}
+
+
+
+
+
+
+/* 页脚优化 */
+
+
+footer{
+
+
+margin-top:100px;
+
+padding:40px;
+
+text-align:center;
+
+color:#888;
+
+font-size:15px;
+
+
+}

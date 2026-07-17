@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+<meta charset="UTF-8">
+
+
+<title>更新日志 - HZBUS_6-5959</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- 导航 -->
+
+
+<nav>
+
+
+<div class="logo">
+
+HZBUS_6-5959
+
+</div>
+
+
+
+
+<div class="menu">
+
+
+<a href="index.html">
+首页
+</a>
+
+
+<a href="bus.html">
+公交
+</a>
+
+
+<a href="photo.html">
+日常记录
+</a>
+
+
+<a href="travel.html">
+旅行
+</a>
+
+
+<a href="updates.html">
+更新日志
+</a>
+
+
+</div>
+
+
+</nav>
+
+
+
+
+
+
+
+
+<!-- 更新日志 -->
+
+
+<section class="updates-page">
+
+
+
+<div class="section-title">
+
+
+<h1>
+更新日志
+</h1>
+
+
+<p>
+记录网站建设以及内容更新过程。
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="posts-list" id="posts-list">
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<footer>
+
+
+© 2026 HZBUS_6-5959
+
+
+</footer>
+
+
+
+
+
+
+
+
+<script>
+
+
+fetch("updates.json")
+
+
+.then(response => response.json())
+
+
+.then(data => {
+
+
+
+let list = document.getElementById("posts-list");
+
+
+
+data.forEach(item => {
+
+
+
+list.innerHTML += `
+
+
+
+<div class="post-card">
+
+
+
+<div class="post-date">
+
+${item.date}
+
+</div>
+
+
+
+
+<h2>
+
+${item.title}
+
+</h2>
+
+
+
+
+<p>
+
+${item.content}
+
+</p>
+
+
+
+
+</div>
+
+
+
+`;
+
+
+
+});
+
+
+
+})
+
+
+
+.catch(error => {
+
+
+
+console.log("更新日志加载失败:", error);
+
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+
+</html>

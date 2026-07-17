@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>HZBUS_6-5959</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- 导航 -->
+
+<nav>
+
+<div class="logo">
+HZBUS_6-5959
+</div>
+
+
+<div class="menu">
+
+<a href="index.html">首页</a>
+
+<a href="bus.html">公交</a>
+
+<a href="photo.html">日常记录</a>
+
+<a href="travel.html">旅行</a>
+
+<a href="contact.html">联系我</a>
+
+</div>
+
+</nav>
+
+
+
+
+
+<!-- 首页封面 -->
+
+
+<section class="hero">
+
+
+<div class="hero-text">
+
+
+<h1>
+记录生活<br>
+发现美好
+</h1>
+
+
+<p>
+记录公交、生活与旅行中的点滴。<br>
+保存每一次值得回忆的瞬间。
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- 三个入口 -->
+
+
+<section class="cards">
+
+
+
+<div class="card bus-card">
+
+
+<h2>
+公交
+</h2>
+
+
+<p>
+线路、车型及图片
+</p>
+
+
+<a href="bus.html">
+查看公交记录 →
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card photo-card">
+
+
+<h2>
+日常记录
+</h2>
+
+
+<p>
+记录平时拍摄的照片和视频。
+</p>
+
+
+<a href="photo.html">
+查看日常记录 →
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="card travel-card">
+
+
+<h2>
+旅行
+</h2>
+
+
+<p>
+记录旅行中的照片、视频和行程。
+</p>
+
+
+<a href="travel.html">
+查看旅行记录 →
+</a>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- 最近更新 -->
+
+
+<section class="home-updates">
+
+
+
+<div class="section-title">
+
+
+<h2>
+最近更新
+</h2>
+
+
+<p>
+查看网站最新内容
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="update-box" id="update-box">
+
+
+</div>
+
+
+
+
+
+<a class="more-link" href="updates.html">
+
+查看全部更新 →
+
+</a>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- 网站通告 -->
+
+
+<section class="home-notice">
+
+
+<div class="notice-card">
+
+
+<h2>
+HZBUS_6-5959
+</h2>
+
+
+<p>
+这是一个记录公交、摄影、生活与旅行的网站。
+</p>
+
+
+<p>
+本站正在持续建设中，未来将不断加入新的照片、视频以及个人记录。
+</p>
+
+
+<a href="contact.html">
+联系我 →
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<footer>
+
+© 2026 HZBUS_6-5959
+
+</footer>
+
+
+
+
+
+
+
+<script>
+
+
+fetch("updates.json")
+
+
+.then(response => response.json())
+
+
+.then(data => {
+
+
+let box = document.getElementById("update-box");
+
+
+
+data.slice(0,3).forEach(item => {
+
+
+
+box.innerHTML += `
+
+
+
+<div class="update-card">
+
+
+
+<div class="update-date">
+
+${item.date}
+
+</div>
+
+
+
+
+<div>
+
+
+<h3>
+
+${item.title}
+
+</h3>
+
+
+
+<p>
+
+${item.content}
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+`;
+
+
+
+});
+
+
+})
+
+
+
+.catch(error => {
+
+
+console.log("更新加载失败:", error);
+
+
+});
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>

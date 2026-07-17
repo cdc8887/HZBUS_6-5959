@@ -633,48 +633,87 @@ footer {
 
 
 
-/* =========================
+/* =====================
    网站通告
-========================= */
+===================== */
 
 
-.notice-box{
+.notice{
+
+    width:1000px;
+
+    margin:80px auto;
+
+}
 
 
-background:#111827;
+
+.notice h2{
+
+    font-size:36px;
+
+    margin-bottom:35px;
+
+}
 
 
-color:white;
+
+.notice-card{
 
 
-padding:45px;
+    background:#111827;
 
 
-border-radius:25px;
+    color:white;
 
 
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    padding:45px;
+
+
+    border-radius:25px;
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,0.15);
 
 
 }
 
 
 
-.notice-box p{
+.notice-title{
 
 
-color:#ddd;
+    font-size:30px;
 
 
-font-size:17px;
+    font-weight:700;
 
 
-line-height:2;
+    margin-bottom:25px;
 
 
-margin:10px 0;
+}
 
 
+
+.notice-card p{
+
+
+    color:#d1d5db;
+
+
+    font-size:17px;
+
+
+    line-height:2;
+
+
+    margin:8px 0;
+
+
+}
 }
 
 

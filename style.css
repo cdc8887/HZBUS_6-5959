@@ -764,3 +764,96 @@ footer{
 
 
 }
+/* 首页最近更新 */
+
+.home-updates{
+
+width:1000px;
+margin:80px auto;
+
+}
+
+
+.section-title h2{
+
+font-size:36px;
+margin-bottom:10px;
+
+}
+
+
+.section-title p{
+
+color:#777;
+
+}
+
+
+
+
+.update-box{
+
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,0.06);
+
+}
+
+
+
+.update-card{
+
+display:flex;
+gap:40px;
+align-items:center;
+padding:30px 40px;
+border-bottom:1px solid #eee;
+
+}
+
+
+
+.update-card:last-child{
+
+border-bottom:none;
+
+}
+
+
+
+.update-date{
+
+width:130px;
+color:#3366ff;
+font-size:18px;
+
+}
+
+
+
+.update-card h3{
+
+font-size:22px;
+margin:0 0 10px;
+
+}
+
+
+
+.update-card p{
+
+color:#777;
+margin:0;
+
+}
+
+
+
+.more-link{
+
+display:block;
+margin-top:25px;
+color:#3366ff;
+
+}
